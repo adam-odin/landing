@@ -1,0 +1,85 @@
+:root {
+    --herog: #1F2937;
+    --hero: #F9FAF8;
+    --heros: #E5E7EB;
+    --herob: #3882F6;
+    --heroi: #1F2937;
+}
+
+/* 
+hero and footer
+dark background (herog)
+
+Main text (hero) 
+48px extra-bold
+24px Header logo text
+
+18px secondary, header link (heros)
+quote section background
+
+36px extra-bold information (heroi)
+36px light italic quote text
+
+button (herob)
+*/
+
+html {
+
+}
+
+head {
+    background-color: herog;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    display: flex;
+    /* Three items: header middle footer */
+    flex-direction: column;
+    flex-wrap: nowrap; 
+
+
+}
+
+.header {
+    flex-shrink: 0;
+    height: 60px;
+    padding: 0 120px;
+
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: herog;
+
+}
+
+.logo {
+    color: hero;
+}
+
+.link {
+    color: heros;
+}
+
+.middle {
+    flex: 1 1 auto;
+    display: flex;
+
+    
+}
+
+
+
+.footer {
+    flex-shrink: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
