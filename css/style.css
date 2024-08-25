@@ -28,7 +28,7 @@ html {
 }
 
 head {
-    background-color: Var(--herog);
+    
 }
 
 body {
@@ -88,6 +88,7 @@ body {
 }
 
 .section-one {
+    flex: 1;
     background-color: var(--herog);
     color: var(--hero);
     display: flex;
@@ -95,17 +96,22 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    height: 300px;
 }
 
 .intro-header {
     font-size: 48px;
     font-weight: extra-bold;
+    display: flex;
+    align-self: center;
 }
 
 .section-two {
+    flex: 1;
     background-color: var(--hero);
     color: var(--heroi);
     list-style-type: none;
+    height: 300px;
 }
 
 .card-list {
@@ -124,16 +130,21 @@ body {
 }
 
 .section-three {
+    flex: 1;
     background-color: var(--heros);
     color: var(--heroi);
+    height: 300;
 }
 
 .section-four {
+    flex: 1;
     background-color: var(--hero);
     color: var(--herob);
+    height: 300;
+
 }
 
-.button {
+.bottom-button {
     background-color: var(--herob);
     color: var(--hero);
 }
