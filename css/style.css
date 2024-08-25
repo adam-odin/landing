@@ -41,36 +41,37 @@ body {
 
     display: flex;
     /* Three items: header middle footer */
-    flex-direction: column;
-    flex-wrap: nowrap; 
-
-
+    flex-flow: column nowrap; 
+    align-items: stretch;
+    /* justify-content: center; */
+    gap: 0;
+    box-sizing: border-box;
 }
 
 .header {
     flex-shrink: 0;
     height: 60px;
     line-height: 63px;
-    padding: 0 80px;
+    padding: 0;
+    margin: 0;
 
     box-sizing: border-box;
     
-    /* ABSOLUTELY CRUCIAL OR LINKS NEVER APPEAR!!!*/
     display: flex; 
-    /* */
     align-items: center;
     justify-content: space-between;
 
     background-color: var(--herog);
-    color: var(--hero) /*delete later just checking links*/
-
-}
+    }
 
 .header-logo {
+    display: flex;
     color: var(--hero);
     font-size: 24px;
     line-height: 26px;
     font-weight: bold;
+    padding: 0 60px;
+    margin: 0;
 }
 
 .header-links {
@@ -79,7 +80,7 @@ body {
     flex-flow: row nowrap;
     align-items: center;
     justify-content: flex-end;
-    gap: 10px;
+    gap: 20px;
 
     list-style-type: none;
     color: var(--heros);
@@ -87,6 +88,7 @@ body {
     line-height: 26px;
     font-weight: lighter;
     text-decoration: none;
+    padding: 0 20px 0 0;
 
 }
 
@@ -95,8 +97,6 @@ body {
     display: flex;
     flex-flow: column nowrap;
 
-
-    
 }
 
 .section-one {
@@ -104,20 +104,21 @@ body {
     background-color: var(--herog);
     color: var(--hero);
     display: flex;
-    /* flex-flow: row nowrap; */
-    flex-direction: row;
+    flex-flow: row nowrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 300px;
-    padding-left: 10px;
-    /* max-width: 1000px; */
+    padding: 0; 
+    margin: 0;
+    gap: 50px;
 }
 
 .intro {
     display: flex;
     flex-flow: column nowrap;
     align-content: centre;
-    padding: 40px 40px 40px 40px;
+    min-width: 250px;
+    padding: 40px 0 60px 80px;
 }
 
 .intro-header {
@@ -141,7 +142,8 @@ body {
     height: 46px;
     border: 5px solid var(--hero);
     border-radius: 12px;
-    border-shadow: 0 1px 5px 0;
+    border-style: outset;
+    /* shadow-border: 0 1px 5px 0; */
     /* padding: 10px 20px; */
     color: var(--hero);
     font-size: 24px;
@@ -151,8 +153,12 @@ body {
 }
 
 #card-dark {
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    min-width: 300px;
 }
 
 .section-two {
@@ -160,21 +166,24 @@ body {
     background-color: var(--hero);
     color: var(--heroi);
     list-style-type: none;
-    height: 300px;
+    /* height: 300px; */
     min-width: 600px;
-    padding-right: 0 40px 0 8px;
+    padding: 0 80px 0 80px;
+    margin-right: 80px;
     display: flex;
     flex-flow: column nowrap;
+    /* two items: header and (row of) cards */
     align-items: center;
     /* justify-content: center; */
 }
 
 .card-list {
+    /* flex: 1; */
     list-style-type: none;
     display: flex;
     flex-flow: row nowrap;
-    align-items: center;
-    justify-content: space-around;
+    /* align-items: center; */
+    /* justify-content: space-around; */
     gap: 20px;
 }
 
@@ -185,23 +194,22 @@ body {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    justify-content: centre;
+    justify-content: center;
 }
 
 .card-image {
     border: 5px solid var(--herob);
     border-radius: 20px;
     padding: 30px;
-    width: 100px;
-    height: 120px;
+    /* width: 100px;
+    height: 120px; */
     display: flex;
     /* align-items: center; */
     /* justify-content: center; */
-
 }
 
 .card-text {
-    /* display: flex; */
+    display: flex;
     /* align-items: center; */
     /* justify-content: center; */
     text-align: center;
@@ -211,36 +219,36 @@ body {
 
 .section-three {
     flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
     background-color: var(--heros);
     color: var(--heroi);
-    height: 300px;
-    padding: 40px 100px 40px 60px; 
-}
-
-#testimonial-thor {
-    /* flex: 1; */
-    display: flex;
-    max-width: 800px; /* flex: 0.1 1 auto; */
-    padding: 0;
-    margin: 0;
+    min-height: 160px;
+    min-width: 340px;
+    padding: 50px 100px 50px 100px; 
 }
 
 #testimonial-quote-thor {
+    display: flex;
     font-size: 24px;
-    line-height: 30px;
-    font-weight: lighter;
+    line-height: 26px;
+    font-weight: 100;
     font-style: italic;
     padding: 0;
-    margin: 0;
+    margin: 0 0 0 40px;
     }
 
 #testimonial-name-thor {
-    float: right;
-    flex: 0.2 1 auto;
+    /* flex-shrink: 0;*/
+    /* float: right; */
     font-size: 16px;
-    font-weight: heavy;
+    font-weight: bold;
     padding: 0;
-    margin: 8px 0 0;
+    margin: 0 40px 0 0;
+    align-self: flex-end;
 }
 
 .section-four {
@@ -248,11 +256,16 @@ body {
     background-image: linear-gradient(166deg, var(--heroc) 7%, var(--herod) 92%);
     color: var(--hero);
     /* height: 300px; */
+    margin: 40px 80px;
+    border: 5px solid var(--hero);
+    border-radius: 20px;
     padding: 40px 80px;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
+    min-width: 480px;
     
   /* -webkit-background-clip: text;
   background-clip: text;
@@ -261,8 +274,28 @@ body {
 }
 
 .action {
-    flex: 1;
+    /* flex: 1; */
     display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 6px;
+    padding: 0;
+    margin: 0 auto 0 0;
+    max-width: 100;
+}
+
+#call {
+    display: flex;
+    font-weight: bolder;
+    padding: 0;
+    margin: 0;
+}
+
+#sign {
+    display: flex;
+    padding: 0;
+    margin: 0;
 }
 
 .bottom-button {
