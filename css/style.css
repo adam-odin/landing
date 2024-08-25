@@ -63,15 +63,19 @@ body {
     font-weight: bold;
 }
 
-.link {
+.links {
+    list-style-type: none;
     color: var(--heros);
     font-size: 18px;
     font-weight: lighter;
+
 }
 
 .middle {
     flex: 1 1 auto;
     display: flex;
+    flex-flow: column nowrap;
+
 
     
 }
@@ -79,11 +83,37 @@ body {
 .section-one {
     background-color: var(--herog);
     color: var(--hero);
+    display: flex;
+    /* flex-flow: row nowrap; */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.intro-header {
+    font-size: 48px;
+    font-weight: extra-bold;
 }
 
 .section-two {
     background-color: var(--hero);
     color: var(--heroi);
+    list-style-type: none;
+}
+
+.card-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 12px;
+}
+
+.cards {
+    /* width: 100px; */
+    font-size: xx-small;
+    font-weight: lighter;
 }
 
 .section-three {
@@ -97,9 +127,9 @@ body {
 }
 
 .button {
-
+    background-color: var(--herob);
+    color: var(--hero);
 }
-
 
 .footer {
     flex-shrink: 0;
