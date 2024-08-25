@@ -28,7 +28,7 @@ html {
 }
 
 head {
-    background-color: herog;
+    background-color: Var(--herog);
 }
 
 body {
@@ -53,16 +53,20 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    background-color: herog;
+    background-color: var(--herog);
 
 }
 
 .logo {
-    color: hero;
+    color: var(--hero);
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .link {
-    color: heros;
+    color: var(--heros);
+    font-size: 18px;
+    font-weight: lighter;
 }
 
 .middle {
@@ -72,6 +76,29 @@ body {
     
 }
 
+.section-one {
+    background-color: var(--herog);
+    color: var(--hero);
+}
+
+.section-two {
+    background-color: var(--hero);
+    color: var(--heroi);
+}
+
+.section-three {
+    background-color: var(--heros);
+    color: var(--heroi);
+}
+
+.section-four {
+    background-color: var(--hero);
+    color: var(--herob);
+}
+
+.button {
+
+}
 
 
 .footer {
@@ -80,6 +107,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    background-color: var(--herog);
+    color: var(--hero);
 }
 
 
