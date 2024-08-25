@@ -1,30 +1,33 @@
 :root {
     --herog: #1F2937;
-    --hero: #F9FAF8;
+    --hero: #FFFFFF;
     --heros: #E5E7EB;
-    --herob: #3882F6;
+    --herot: #88898c;
+    --herob: #00AEF0;
+    --heroc: #129bf2;
+    --herod: #f77d7a;
     --heroi: #1F2937;
+
+    
 }
 
+/* --ds-font-family-display:  */
+/* linear-gradient(166deg, #129bf2 7%, #f77d7a 92%) */
+
 /* 
-hero and footer
-dark background (herog)
-
-Main text (hero) 
-48px extra-bold
-24px Header logo text
-
 18px secondary, header link (heros)
-quote section background
-
-36px extra-bold information (heroi)
-36px light italic quote text
 
 button (herob)
 */
 
-html {
+/* * {
+    padding: 0;
+    margin: 0;
+    border: 0;
+} */
 
+html {
+    font-family: Roboto "Roboto Condensed" "Bebas Neue";
 }
 
 head {
@@ -47,9 +50,14 @@ body {
 .header {
     flex-shrink: 0;
     height: 60px;
+    line-height: 63px;
     padding: 0 80px;
 
     box-sizing: border-box;
+    
+    /* ABSOLUTELY CRUCIAL OR LINKS NEVER APPEAR!!!*/
+    display: flex; 
+    /* */
     align-items: center;
     justify-content: space-between;
 
@@ -61,18 +69,22 @@ body {
 .header-logo {
     color: var(--hero);
     font-size: 24px;
+    line-height: 26px;
     font-weight: bold;
 }
 
-.links {
+.header-links {
+    flex: 1;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-end;
+    gap: 10px;
 
     list-style-type: none;
     color: var(--heros);
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 26px;
     font-weight: lighter;
     text-decoration: none;
 
@@ -97,13 +109,50 @@ body {
     align-items: center;
     justify-content: space-around;
     height: 300px;
+    padding-left: 10px;
+    /* max-width: 1000px; */
+}
+
+.intro {
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: centre;
+    padding: 40px 40px 40px 40px;
 }
 
 .intro-header {
+    display: flex;
+    padding: 0;
+    margin: 0;
     font-size: 48px;
+    line-height: 50px;
     font-weight: extra-bold;
     display: flex;
     align-self: center;
+}
+
+.intro-description {
+    display: flex;
+    max-width: 560px;
+}
+
+.top-button {
+    width: 120px;
+    height: 46px;
+    border: 5px solid var(--hero);
+    border-radius: 12px;
+    border-shadow: 0 1px 5px 0;
+    /* padding: 10px 20px; */
+    color: var(--hero);
+    font-size: 24px;
+    font-weight: bold;
+    background-image: linear-gradient(166deg, var(--heroc) 7%, var(--herod) 92%);
+    margin: 8px 0 0 80px;
+}
+
+#card-dark {
+    flex-shrink: 0;
+    display: flex;
 }
 
 .section-two {
@@ -112,41 +161,120 @@ body {
     color: var(--heroi);
     list-style-type: none;
     height: 300px;
+    min-width: 600px;
+    padding-right: 0 40px 0 8px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    /* justify-content: center; */
 }
 
 .card-list {
     list-style-type: none;
     display: flex;
-    flex-direction: row;
+    flex-flow: row nowrap;
     align-items: center;
     justify-content: space-around;
-    gap: 12px;
+    gap: 20px;
 }
 
 .cards {
     /* width: 100px; */
     font-size: xx-small;
     font-weight: lighter;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: centre;
+}
+
+.card-image {
+    border: 5px solid var(--herob);
+    border-radius: 20px;
+    padding: 30px;
+    width: 100px;
+    height: 120px;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+
+}
+
+.card-text {
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    text-align: center;
+    max-width: 130px;
+    /* padding: 0 20px 0 32px; */
 }
 
 .section-three {
     flex: 1;
     background-color: var(--heros);
     color: var(--heroi);
-    height: 300;
+    height: 300px;
+    padding: 40px 100px 40px 60px; 
+}
+
+#testimonial-thor {
+    /* flex: 1; */
+    display: flex;
+    max-width: 800px; /* flex: 0.1 1 auto; */
+    padding: 0;
+    margin: 0;
+}
+
+#testimonial-quote-thor {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: lighter;
+    font-style: italic;
+    padding: 0;
+    margin: 0;
+    }
+
+#testimonial-name-thor {
+    float: right;
+    flex: 0.2 1 auto;
+    font-size: 16px;
+    font-weight: heavy;
+    padding: 0;
+    margin: 8px 0 0;
 }
 
 .section-four {
     flex: 1;
-    background-color: var(--hero);
-    color: var(--herob);
-    height: 300;
+    background-image: linear-gradient(166deg, var(--heroc) 7%, var(--herod) 92%);
+    color: var(--hero);
+    /* height: 300px; */
+    padding: 40px 80px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    
+  /* -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; */
 
 }
 
+.action {
+    flex: 1;
+    display: flex;
+}
+
 .bottom-button {
-    background-color: var(--herob);
-    color: var(--hero);
+    flex-shrink: 0;
+    background-color: var(--hero);
+    color: var(--herob);
+    border: 10px solid var(--herob);
+    border-radius: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    width: 160px;
+    height: 60px;
 }
 
 .footer {

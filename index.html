@@ -11,13 +11,11 @@
         <div class="header-logo">
             <p>Header Logo</p>
         </div>
-        <div class="header-links">
-            <ul class="links">
-                <li id="link-one"><a href="www.theodinproject.com/" Alternate="website one"></a>Website One</li>
-                <li id="link-two"><a href="www.theodinproject.com/" Alternate="website two"></a>Website Two</li>
-                <li id="link-three"><a href="www.theodinproject.com/" Alternate="website three"></a>Website Three</li>
-            </ul>
-        </div>
+        <ul class="header-links">
+            <li id="link-one"><a href="www.theodinproject.com/" Alternate="website one"></a>Website One</li>
+            <li id="link-two"><a href="www.theodinproject.com/" Alternate="website two"></a>Website Two</li>
+            <li id="link-three"><a href="www.theodinproject.com/" Alternate="website three"></a>Website Three</li>
+        </ul>        
     </div>
     <div class="middle">
         <div class="section-one">
@@ -26,52 +24,51 @@
                 <p class="intro-description">This website has some subtext that goes here under the main title. It's a smaller font and the color is lower contrast</p>
                 <button class="top-button">Sign up</button>
             </div>
-            <a id="card-one" href="https://www.ghostery.com/design/">
+            <a id="card-dark" href="https://www.ghostery.com/design/">
                 <img src="./img/ghostery-logo-dark.svg" alt="ghostery dot com logo for dark background" height="auto" width="350px">
             </a>
         </div>
         <div class="section-two">
-            <h2 class="section-two-header">Some random information</h><!--could be <p>??-->
+            <h2 class="section-two-header">Some random information</h2><!--could be <p>??-->
             <ul class="card-list">
                 <li class="cards">
-                    <a id="card-one" href="https://www.ghostery.com/">
+                    <a class="card-image" href="https://www.ghostery.com/">
                         <img src="./img/ghostery-logo-stacked.svg" alt="ghostery dot com logo and design" height="auto" width="100px">
                     </a>
-                    <p>this is some subtext under an illustration or image</p>
-                </li>
-                    <li class="cards">
-                    <a id="card-two" href="https://www.ghostery.com/">
-                        <img src="./img/ghostery-logo-stacked.svg" alt="ghostery dot com logo and design" height="auto" width="100px">
-                    </a>
-                    <p>this is some subtext under an illustration or image</p>
+                    <p class="card-text">this is some subtext under an illustration or image</p>
                 </li>
                 <li class="cards">
-                    <a id="card-three" href="https://www.ghostery.com/">
+                    <a class="card-image" href="https://www.ghostery.com/">
                         <img src="./img/ghostery-logo-stacked.svg" alt="ghostery dot com logo and design" height="auto" width="100px">
                     </a>
-                    <p>this is some subtext under an illustration or image</p>
+                    <p class="card-text">this is some subtext under an illustration or image</p>
                 </li>
                 <li class="cards">
-                    <a id="card-four" href="https://www.ghostery.com/">
+                    <a class="card-image" href="https://www.ghostery.com/">
                         <img src="./img/ghostery-logo-stacked.svg" alt="ghostery dot com logo and design" height="auto" width="100px">
                     </a>
-                    <p>this is some subtext under an illustration or image</p>
+                    <p class="card-text">this is some subtext under an illustration or image</p>
+                </li>
+                <li class="cards">
+                    <a class="card-image" href="https://www.ghostery.com/">
+                        <img src="./img/ghostery-logo-stacked.svg" alt="ghostery dot com logo and design" height="auto" width="100px">
+                    </a>
+                    <p class="card-text">this is some subtext under an illustration or image</p>
                 </li>
             </ul>
         </div>
         <div class="section-three"><!--try to create absolute minimal div by positioning two paras-->
-            <p>This is an inspiring quote</p>
-            <p>-Thor, God of Thunder, sometime</p>
+            <p id="testimonial-quote-thor">This is an inspiring quote, or a testimonial from a customer. Maybe it's just filling up space, or maybe people will actually read it. Who knows?  All I know is that it looks nice.</p>
+            <p id="testimonial-name-thor">- Thor, God of Thunder, sometime</p>
         </div>
         <div class="section-four">
-            <div><p>Call to action! It's time!<br>
+            <p class="action">Call to action! It's time!<br>
             Sign up for our product by clicking on that button right over there!</p>
             <button class="bottom-button">Sign up</button>
-            </div>
         </div>
     </div>
     <div class="footer">
-        <div><!--is this extra div necessary to center align/justify the <p>?-->
+        <div><!--is this extra div necessary to center align/justify the <p>?  YES, for enforcing max width of 1 text expands to infinite width or 2 the name -->
             <p class="copyright-date">Copyright (c) SwiftLift 2024</p>
         </div>
     </div>
