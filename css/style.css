@@ -47,27 +47,34 @@ body {
 .header {
     flex-shrink: 0;
     height: 60px;
-    padding: 0 120px;
+    padding: 0 80px;
 
     box-sizing: border-box;
     align-items: center;
     justify-content: space-between;
 
     background-color: var(--herog);
+    color: var(--hero) /*delete later just checking links*/
 
 }
 
-.logo {
+.header-logo {
     color: var(--hero);
     font-size: 24px;
     font-weight: bold;
 }
 
 .links {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+
     list-style-type: none;
     color: var(--heros);
     font-size: 18px;
     font-weight: lighter;
+    text-decoration: none;
 
 }
 
